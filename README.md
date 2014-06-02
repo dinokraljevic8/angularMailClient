@@ -1,4 +1,7 @@
-chatrooms
+Angular Mail Client
 =========
 
-Node.js tutorial - Simple chat server
+Jednostavan mail klijent napravljen u angularJS- u koriteći jednostavan node.js api na backend-u
+
+[a link](http://angularmailklijent.herokuapp.com/)
+
