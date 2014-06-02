@@ -1,0 +1,53 @@
+<div class="small-4 columns" ng-controller="MailListingController">
+	<h2>Inbox</h2>
+	<ul id="emailListing">
+		<li ng-repeat="mail in email" ng-click="setSelectedMail(mail)">
+			<div class="container  emailListing" ng-class="{selected: isSelected(mail)}">
+				<div class="small-8 columns">{{ mail.from }}</div>
+				<div class="small-12 columns">{{ mail.subject }}</div>
+			</div>
+		</li>
+	</ul>
+</div>
+
+<div class="small-8 columns" ng-controller="ContentController">
+	<h2>Inbox Zoom</h2>
+
+    <div ng-show="!selectedMail">
+        Nema maila u fokusu
+    </div>
+
+    <div ng-show="selectedMail">
+        <form id="replyForm" ng-submit="sendEmailReply()" ng-show="showingReply">
+            <div class="row collapse">
+                <div class="small-1 columns">
+                    <span class="prefix">To</span>
+                </div>
+                <div class="small-11 columns">
+                    <input type="email" ng-model="reply.to" placeholder="" />
+                </div>
+
+                <div class="small-12 columns">
+                    <textarea ng-model="reply.body">{{ reply.body }}</textarea>
+                </div>
+            </div>
+
+            <button class="button radius" ng-click="sendReply()">Pošalji</button>
+            <button class="button radius alert" ng-click="toggleReplyForm()">Odustani</button>
+        </form>
+
+        <div class="row header">
+            <div class="small-6 columns">{{ selectedMail.subject }}</div>
+            <div class="small-6 columns">{{ selectedMail.sent_at | date:'mm/dd/yyyy' }}</div>
+        </div>
+
+        <div class="row actions">
+            <div class="small-8 columns">{{ selectedMail.from.join(" ,") }} to {{ selectedMail.to }}</div>
+            <a ng-click="toggleReplyForm()" class="button radius push-1">Odgovori</a>
+        </div>
+
+        <div class="small-12 columns" ng-bind-html="selectedMail.body.join(' , ') | unsafe"></div>
+
+
+    </div>
+</div>

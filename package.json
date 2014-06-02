@@ -1,0 +1,8 @@
+{
+  "name": "angular-mail-client",
+  "version": "0.0.1",
+  "description": "Angular mail client application",
+  "dependencies": {
+    "express": "*"
+  }
+}

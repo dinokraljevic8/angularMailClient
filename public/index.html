@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html ng-app="myApp">
+<head>
+	<title>Angular Mail Client</title>
+	
+	<link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/font-awesome/4.0.3/css/font-awesome.min.css">
+	<link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/foundation/5.2.2/css/foundation.min.css">
+	<link rel="stylesheet" href="css/app.css">
+</head>
+<body>
+
+	  <nav class="top-bar" data-topbar>
+	    <ul class="title-area">
+	      <li class="name">
+	        <h1><a href="#">Mail</a></h1>
+	      </li>
+	      <li class="toggle-topbar menu-icon"><a href="#">Menu</a></li>
+	    </ul>
+	
+	  <section class="top-bar-section">
+	    <!-- Right Nav Section -->
+	    <ul class="right">
+          <li ng-show="loading"><img src="images/spinner_32.gif" /></li>
+	      <li ><a href="#/"><i class="fa fa-home"></i></a></li>
+	    	<li ><a href="#/settings"><i class="fa fa-cog"></i></a></li>
+	    </ul>
+	  </section>
+	</nav>
+	
+	<div ng-view>
+
+	</div>
+
+
+      <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+
+      <script src="//cdnjs.cloudflare.com/ajax/libs/foundation/5.2.2/js/foundation.min.js"></script>
+
+      <script src="../bower_components/angular/angular.js"></script>
+      <script src="../bower_components/angular-route/angular-route.js"></script>
+
+      <script src="js/main.js"></script>
+
+</body>
+</html>
