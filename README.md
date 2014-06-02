@@ -3,5 +3,6 @@ Angular Mail Client
 
 Jednostavan mail klijent napravljen u angularJS- u koriteći jednostavan node.js api na backend-u
 
-[a link](http://angularmailklijent.herokuapp.com/)
+Live demo na heroku:
+[http://angularmailklijent.herokuapp.com/](http://angularmailklijent.herokuapp.com/)
 
