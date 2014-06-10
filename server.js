@@ -24,7 +24,7 @@ function sleep(delay) {
 }
 
 app.post('/api/send', function(req, res) {
-    sleep(3);
+    sleep(3000);
     res.json(true);
 });
 

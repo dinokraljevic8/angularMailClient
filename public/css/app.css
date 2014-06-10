@@ -47,13 +47,16 @@ input.ng-invalid-maxlength.ng-dirty {
 	margin-top: 20px;
 	overflow-y: scroll;
 	overflow-x: hidden;
+    margin-left: 0;
 }
-
+#emailListing .selected {
+    background: #bbb;
+}
 .emailListing {
 	border-radius: 3px;
 	height: 120px;
 	overflow: hidden;
-	padding: 13px;
+	padding: 13px; 0;
 }
 
 .emailListing img {
@@ -70,13 +73,23 @@ input.ng-invalid-maxlength.ng-dirty {
 	font-size: 0.8em;
 }
 
-#replyForm form {
-    border: none;
+.emailListing:hover {
+    background: #eee;
 }
 
+#replyForm {
+    border: 0 !important;
+}
 
+.loading-image {
+    margin-top: 6px;
+    display: inline-block;
+}
 
-
+.filterInput {
+    margin-top: 14px !important;
+    width: 90% !important;
+}
 
 
 

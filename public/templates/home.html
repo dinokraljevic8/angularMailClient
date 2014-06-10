@@ -1,14 +1,13 @@
 <div class="small-4 columns" ng-controller="MailListingController">
-	<h2>Inbox</h2>
-	<ul id="emailListing">
-		<li ng-repeat="mail in email" ng-click="setSelectedMail(mail)">
-			<div class="container  emailListing" ng-class="{selected: isSelected(mail)}">
-				<div class="small-8 columns">{{ mail.from }}</div>
-				<div class="small-12 columns">{{ mail.subject }}</div>
-			</div>
+    <input class="filterInput" type="search" placeholder="Filtriranje mailova" ng-model="search.$"/>
+
+    <ul id="emailListing">
+		<li email-listing email="mail" garavatar-size="20" action="setSelectedMail(selectedMail)" ng-repeat="mail in (email | orderBy: 'sent_at':true | filter:search | filter:searchPastNYears)">
+
 		</li>
 	</ul>
 </div>
+
 
 <div class="small-8 columns" ng-controller="ContentController">
 	<h2>Inbox Zoom</h2>
